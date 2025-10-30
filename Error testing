@@ -7,7 +7,7 @@ fs.readFile("File1.txt", "utf8", (err, data1) => {
     fs.readFile("File2.txt", "utf8", (err, data2) => {
       if (err) {
         console.log("Error reading File2:", err);
-      } if (!err){
+      } if (!err){ //hi
         fs.readFile("File3.txt", "utf8", (err, data3) => {
           if (err) {
             console.log("Error reading File3:", err);
