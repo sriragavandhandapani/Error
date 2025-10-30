@@ -1,0 +1,24 @@
+const fs = require("fs");
+
+fs.readFile("File1.txt", "utf8", (err, data1) => {
+  if (err) {
+    console.log("Error reading File1:", err);
+  } else {
+    fs.readFile("File2.txt", "utf8", (err, data2) => {
+      if (err) {
+        console.log("Error reading File2:", err);
+      } else {
+        fs.readFile("File3.txt", "utf8", (err, data3) => {
+          if (err) {
+            console.log("Error reading File3:", err);
+          } else {
+            console.log("All files read successfully!");
+            console.log("File1:", data1);
+            console.log("File2:", data2);
+            console.log("File3:", data3);
+          }
+        });
+      }
+    });
+  }
+});
